@@ -53,6 +53,8 @@
     document.getElementById('copy').onclick = function () {
       navigator.clipboard.writeText(code).then(function () { document.getElementById('copy').textContent = 'Copied'; });
     };
+    // Volvo's code is only valid for about a minute: go back to the dashboard straight away
+    if (back) location.replace(back);
   })();
 </script>
 </body>
